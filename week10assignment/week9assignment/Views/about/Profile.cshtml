@@ -1,0 +1,51 @@
+﻿@using week9assignment.Models;
+@model Employee
+
+@{
+    ViewBag.Title = "About -" + Model.Name;
+}
+
+
+
+
+
+
+<!-- Main -->
+<div id="main-wrapper">
+    <div class="container">
+        <div class="row 200%">
+            <div class="4u">
+                <div id="sidebar">
+
+                    <!-- Sidebar -->
+                    <section>
+                        <h3>Meet the Team</h3>
+                        <ul class="style2">
+                            @Html.Action("EmployeeList")
+                        </ul>
+                    </section>
+
+                </div>
+            </div>
+            <div class="8u important(collapse)">
+                <div id="content">
+
+
+                    <!-- Content -->
+                    <article>
+
+                        <h2>@Model.Name</h2>
+                        <img src="@Model.PhotoUrl" alt="@Model.Name" />
+                        <p>
+                            @Model.Bio
+                        </p>
+
+                    </article>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

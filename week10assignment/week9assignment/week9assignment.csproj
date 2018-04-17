@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A31A1169-722C-4AB5-9C24-8B13735282FA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>week9assignment</RootNamespace>
+    <AssemblyName>week9assignment</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about\assets\css\font-awesome.min.css" />
+    <Content Include="about\assets\css\ie\html5shiv.js" />
+    <Content Include="about\assets\css\ie\PIE.htc" />
+    <Content Include="about\assets\css\ie\v8.css" />
+    <Content Include="about\assets\css\images\bg01.png" />
+    <Content Include="about\assets\css\skel.css" />
+    <Content Include="about\assets\css\style-1000px.css" />
+    <Content Include="about\assets\css\style-desktop.css" />
+    <Content Include="about\assets\css\style-mobile.css" />
+    <Content Include="about\assets\css\style.css" />
+    <Content Include="about\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="about\assets\images\employees\dixon.jpg" />
+    <Content Include="about\assets\images\employees\fuller.jpg" />
+    <Content Include="about\assets\images\employees\kelly.jpg" />
+    <Content Include="about\assets\images\employees\miller.jpg" />
+    <Content Include="about\assets\images\employees\russell.jpg" />
+    <Content Include="about\assets\images\pic01.jpg" />
+    <Content Include="about\assets\images\pic02.jpg" />
+    <Content Include="about\assets\images\pic03.jpg" />
+    <Content Include="about\assets\images\pic04.jpg" />
+    <Content Include="about\assets\images\pic05.jpg" />
+    <Content Include="about\assets\images\pic06.jpg" />
+    <Content Include="about\assets\images\pic07.jpg" />
+    <Content Include="about\assets\js\init.js" />
+    <Content Include="about\assets\js\jquery.dropotron.min.js" />
+    <Content Include="about\assets\js\jquery.min.js" />
+    <Content Include="about\assets\js\skel-layers.min.js" />
+    <Content Include="about\assets\js\skel.min.js" />
+    <Content Include="App_Data\EmployeesContext-20151104082355.mdf" />
+    <Content Include="App_Data\EmployeesContext-20151104082355_log.ldf">
+      <DependentUpon>EmployeesContext-20151104082355.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\ie\html5shiv.js" />
+    <Content Include="assets\css\ie\PIE.htc" />
+    <Content Include="assets\css\ie\v8.css" />
+    <Content Include="assets\css\images\bg01.png" />
+    <Content Include="assets\css\skel.css" />
+    <Content Include="assets\css\style-1000px.css" />
+    <Content Include="assets\css\style-desktop.css" />
+    <Content Include="assets\css\style-mobile.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\images\employees\dixon.jpg" />
+    <Content Include="assets\images\employees\fuller.jpg" />
+    <Content Include="assets\images\employees\kelly.jpg" />
+    <Content Include="assets\images\employees\miller.jpg" />
+    <Content Include="assets\images\employees\russell.jpg" />
+    <Content Include="assets\images\pic01.jpg" />
+    <Content Include="assets\images\pic02.jpg" />
+    <Content Include="assets\images\pic03.jpg" />
+    <Content Include="assets\images\pic04.jpg" />
+    <Content Include="assets\images\pic05.jpg" />
+    <Content Include="assets\images\pic06.jpg" />
+    <Content Include="assets\images\pic07.jpg" />
+    <Content Include="assets\js\init.js" />
+    <Content Include="assets\js\jquery.dropotron.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\skel-layers.min.js" />
+    <Content Include="assets\js\skel.min.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="about\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="about\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="about\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="about\assets\fonts\FontAwesome.otf" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Views\about\assets\css\font-awesome.min.css" />
+    <Content Include="Views\about\assets\css\ie\html5shiv.js" />
+    <Content Include="Views\about\assets\css\ie\PIE.htc" />
+    <Content Include="Views\about\assets\css\ie\v8.css" />
+    <Content Include="Views\about\assets\css\images\bg01.png" />
+    <Content Include="Views\about\assets\css\skel.css" />
+    <Content Include="Views\about\assets\css\style-1000px.css" />
+    <Content Include="Views\about\assets\css\style-desktop.css" />
+    <Content Include="Views\about\assets\css\style-mobile.css" />
+    <Content Include="Views\about\assets\css\style.css" />
+    <Content Include="Views\about\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Views\about\assets\images\employees\dixon.jpg" />
+    <Content Include="Views\about\assets\images\employees\fuller.jpg" />
+    <Content Include="Views\about\assets\images\employees\kelly.jpg" />
+    <Content Include="Views\about\assets\images\employees\miller.jpg" />
+    <Content Include="Views\about\assets\images\employees\russell.jpg" />
+    <Content Include="Views\about\assets\images\pic01.jpg" />
+    <Content Include="Views\about\assets\images\pic02.jpg" />
+    <Content Include="Views\about\assets\images\pic03.jpg" />
+    <Content Include="Views\about\assets\images\pic04.jpg" />
+    <Content Include="Views\about\assets\images\pic05.jpg" />
+    <Content Include="Views\about\assets\images\pic06.jpg" />
+    <Content Include="Views\about\assets\images\pic07.jpg" />
+    <Content Include="Views\about\assets\js\init.js" />
+    <Content Include="Views\about\assets\js\jquery.dropotron.min.js" />
+    <Content Include="Views\about\assets\js\jquery.min.js" />
+    <Content Include="Views\about\assets\js\skel-layers.min.js" />
+    <Content Include="Views\about\assets\js\skel.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\aboutController.cs" />
+    <Compile Include="Controllers\companyController.cs" />
+    <Compile Include="Controllers\contactController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\homeController.cs" />
+    <Compile Include="Controllers\portfolioController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\EmployeesContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\home\Index.cshtml" />
+    <Content Include="Views\about\Index.cshtml" />
+    <Content Include="Views\company\Index.cshtml" />
+    <Content Include="Views\contact\Index.cshtml" />
+    <Content Include="Views\portfolio\Index.cshtml" />
+    <Content Include="Views\about\EmployeeList.cshtml" />
+    <Content Include="Views\about\Profile.cshtml" />
+    <Content Include="Views\about\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Views\about\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Views\about\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Views\about\assets\fonts\FontAwesome.otf" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1383</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1383/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

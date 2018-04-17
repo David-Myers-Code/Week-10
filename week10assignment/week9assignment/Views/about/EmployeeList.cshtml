@@ -1,0 +1,8 @@
+﻿@using week9assignment.Models;
+@model IList<Employee>
+
+@foreach (Employee employee in Model)
+{
+    <li><a href="~/about/@employee.UrlPath">@employee.Name</a></li>
+}
+
